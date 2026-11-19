@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExamSphere -Prepare and Ace your exams</title>
+  <link rel="stylesheet" href="Untitled-2.css">
+</head>
+<body>
+  <header>
+    <h1>ExamSphere</h1>
+    <p>This platforms helps you to prepare for your exam with AI generated Questions</p>
+    <p>Start your journey here !</p>
+  </header>
+
+  <main>
+    <section id="profilePage" class="page card">
+      <h2>Student Profile</h2>
+      <p>Enter your details to start practicing.</p>
+      <form id="profileForm">
+        <input id="studentName" placeholder="Full Name" required>
+        <input id="course" placeholder="Course / Class" required>
+        <input id="semester" placeholder="Semester (optional)">
+        <button type="submit">Save Profile</button>
+      </form>
+    </section>
+
+    <section id="dashboardPage" class="page hidden">
+      <div class="card welcome">
+        <div>
+          <h2>Welcome,Greetings <span id="welcomeName"></span>!</h2>
+          <p>Choose your exam and start preparing for it.</p>
+        </div>
+        <button id="editProfile" class="secondary">Edit Profile</button>
+      </div>
+
+      <div class="stats">
+        <div class="card">
+          <h3>Tests Attempted By You</h3>
+          <strong id="totalTests">0</strong>
+        </div>
+        <div class="card">
+          <h3> Your Average Score</h3>
+          <strong id="averageScore">0%</strong>
+        </div>
+        <div class="card">
+          <h3> Your Best Score</h3>
+          <strong id="bestScore">0%</strong>
+        </div>
+      </div>
+
+      <section class="card">
+        <h2>Select the Exam you want to practice.</h2>
+        <label for="examSelect">Choose Exam</label>
+        <select id="examSelect">
+          <option value="">Select an exam</option>
+            <option>CBSE Class 10</option>
+            <option>CBSE Class 12</option>
+            <option>JEE Main</option>
+            <option>JEE Advanced</option>
+            <option>NEET UG</option>
+            <option>CLAT</option>
+            <option>CA Foundation</option>
+            <option>CA Intermediate</option>
+            <option>CA Final</option>
+            <option>CUET UG</option>
+        </select>
+
+        <h3>Choose Subject</h3>
+        <div id="subjectCards" class="subjects">
+          <p>Subjects are displayed only after you choose an exam.</p>
+        </div>
+
+        <label for="topicSelect">Choose Topic</label>
+        <select id="topicSelect" disabled>
+          <option value="">Select a topic</option>
+        </select>
+
+        <label for="difficultySelect">Difficulty Level</label>
+        <select id="difficultySelect">
+          <option>Easy</option>
+          <option>Medium</option>
+          <option>Hard</option>
+        </select>
+
+        <label for="questionAmount">Number of Questions</label>
+        <select id="questionAmount">
+          <option value="5">5 Questions</option>
+          <option value="10">10 Questions</option>
+          <option value="25">25 Questions</option>
+        </select>
+
+        <p id="testStatus">Select your exam to begin.</p>
+        <button id="startTest" disabled>Start Practice Test</button>
+      </section>
+
+      <section class="card">
+        <h2>Recent Test History</h2>
+        <div id="historyList">No tests attempted yet.</div>
+      </section>
+    </section>
+
+    <section id="testPage" class="page hidden card">
+      <h2 id="testTitle">Practice Test</h2>
+      <p id="questionCount"></p>
+      <h3 id="questionText"></h3>
+      <div id="options"></div>
+      <p id="questionExplanation"></p>
+
+      <div class="actions">
+        <button id="previousBtn" class="secondary">Previous</button>
+        <button id="nextBtn">Next</button>
+      </div>
+
+      <button id="submitTest" class="submit">Submit Test</button>
+    </section>
+
+    <section id="resultPage" class="page hidden card">
+      <h2>Test Result</h2>
+      <h1 id="scoreText">0 / 0</h1>
+      <h3 id="resultMessage"></h3>
+      <p id="resultDetails"></p>
+      <button id="dashboardBtn">Back to Dashboard</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 ExamSphere | Learn • Practice • Improve with Us</p>
+  </footer>
+
+  <script src="Untitled-3.js"></script>
+</body>
+</html>
+
