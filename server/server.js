@@ -298,8 +298,8 @@ for the selected examination.
 });
 
 // Start server
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-  console.log("ExamSphere server running at http://localhost:" + PORT);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log("ExamSphere server running on port " + PORT);
 });
